@@ -1,0 +1,36 @@
+package com.masai;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.masai")
+public class Appconfig {
+	
+	
+	@Bean(value = "theMap")
+	public Map<Student, Course> getMap(){
+		
+		Map<Student, Course> map=new HashMap<>();
+		
+		
+		Student s1=new Student(1, "mahesh","patna","M@gamil", 500);
+		Student s2=new Student(2,"nitish","jodhpur","N@gmail", 600);
+		
+		Course c1=new Course(1, "Java", 12, 12000);
+		Course c2=new Course(2, "mern", 13, 14000);
+		
+		map.put(s1, c1);
+		map.put(s2, c2);
+		
+		
+		
+		return map;
+		
+	}
+
+}

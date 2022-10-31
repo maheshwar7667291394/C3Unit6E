@@ -1,0 +1,29 @@
+IoC
+Spring IoC is the mechanism to achieve loose-coupling between Objects dependencies.
+ To achieve loose coupling and dynamic binding of the objects at runtime, objects dependencies are injected by other 
+assembler objects. Spring IoC container is the program that injects dependencies into an object and make it ready for our use.
+
+
+
+
+Bean Life Cycle
+The lifecycle of any object means when & how it is born, how it behaves throughout its life,
+ and when & how it dies. Similarly, the bean life cycle refers to when & how the bean is instantiated,
+ what action it performs until it lives, and when & how it is destroyed. In this article, we will discuss 
+the life cycle of the bean. 
+
+Bean life cycle is managed by the spring container. When we run the program then, 
+first of all, the spring container gets started. After that, the container creates the i
+nstance of a bean as per the request, and then dependencies are injected. And finally,
+ the bean is destroyed when the spring container is closed. Therefore, 
+if we want to execute some code on the bean instantiation and just after closing the spring container, 
+then we can write that code inside the custom init() method and the destroy() method
+
+
+following process imvolve in bean life cycle
+1.Container Started
+2.Bean initiated
+3.dependebncies injection
+4custom init method
+5.cutom utility method
+6.custom destroy method
